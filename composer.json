@@ -1,0 +1,21 @@
+{
+    "name" : "jun00rbiter/calendar-view",
+    "keywords": ["date", "calendar", "events", "PHP"],
+    "homepage": "https://github.com/jun00rbiter/CalendarView",
+    "type": "library",
+    "license": "MIT",
+    "require" : {
+        "yohang/calendr" : "^2.0",
+        "ramsey/uuid" : "^3.5"
+    },
+    "autoload" : {
+        "psr-4": {
+            "CalendarView\\": "src/CalendarView/"
+        }
+    },
+    "autoload-dev" : {
+        "psr-4": {
+            "CalendarViewExample\\": "src/CalendarViewExample/"
+        }
+    }
+}
