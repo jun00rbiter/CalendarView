@@ -12,5 +12,10 @@
         "psr-4": {
             "CalendarView\\": "src/CalendarView/"
         }
+    },
+    "autoload-dev" : {
+        "psr-4": {
+            "CalendarViewExample\\": "src/CalendarViewExample/"
+        }
     }
 }

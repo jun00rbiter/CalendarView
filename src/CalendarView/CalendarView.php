@@ -90,7 +90,7 @@ class CalendarView
     {
         if ($this->renderer instanceof RenderingHelper) {
             $this->renderer->setUrlBase($urlBase);
-            return ture;
+            return true;
         }
         return false;
     }
@@ -99,7 +99,7 @@ class CalendarView
     {
         if ($this->renderer instanceof RenderingHelper) {
             $this->renderer->setUrlDateFormat($urlDateFormat);
-            return ture;
+            return true;
         }
         return false;
     }
@@ -151,7 +151,7 @@ class CalendarView
      * @param   null|int        $month          number of month (1~12)
      * @return  reference of CalendarView
      */
-    public function & setCalendar($yearOrStart, $month = null)
+    public function setCalendar($yearOrStart, $month = null)
     {
         if (!$yearOrStart instanceof \DateTime) {
             if ($month<1 || 12<$month) {
@@ -209,7 +209,7 @@ class CalendarView
                 $calendar['weeks'][$weekNum]['days'][$dateNum]['begin'] = $date;
                 $calendar['weeks'][$weekNum]['days'][$dateNum]['end'] = $day->getEnd();
                 $calendar['weeks'][$weekNum]['days'][$dateNum]['day_html'] = $this->renderer->getDayHtml($date, $inRange, $today, $events);
-                $calendar['weeks'][$weekNum]['days'][$dateNum]['contain'] = $contain;
+                $calendar['weeks'][$weekNum]['days'][$dateNum]['in_range'] = $inRange;
                 $calendar['weeks'][$weekNum]['days'][$dateNum]['today'] = $today;
                 $calendar['weeks'][$weekNum]['days'][$dateNum]['events'] = $events;
 
